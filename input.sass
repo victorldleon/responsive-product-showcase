@@ -1,0 +1,67 @@
+
+// variables
+$full_w: 100%
+$container_p: 1em 3em
+$responsive_container_p: 1em 1em
+// colors
+$primary: #7AE7C7
+$secondary: #75BBA7
+$grey: #333333
+$light_grey: #efefef
+$white: #ffffff
+
+body
+  margin: 0
+  overflow-x: hidden
+  font-family: 'Roboto', sans-serif
+
+*
+  box-sizing: border-box
+
+.header
+  padding: $container_p
+  width: $full_w
+
+.items-container
+  display: flex
+  flex-wrap: wrap
+  padding: $container_p
+  width: $full_w
+  .item
+    align-items: center
+    border: solid .1em $light_grey
+    background-image: url('./assets/shopping-cart.svg')
+    background-repeat: no-repeat
+    background-position: 1.3em 1em
+    background-size: 70%
+    display: flex
+    flex-flow: column
+    height: 16em
+    justify-content: space-between
+    min-height: 16em
+    margin: .5em
+    padding: 2em 1em 1em 1em
+    width: 12em
+    .item-btn
+      border-radius: 3em
+      background-color: $white
+      font-size: 1.4em
+      height: 2em
+      width: 2em
+
+@media screen and (max-width:800px)
+  .items-container
+    flex-flow: column
+    padding: $responsive_container_p
+    .item
+      flex-flow: row
+      justify-content: flex-start
+      background-size: 6em
+      height: 8em
+      min-height: 8em
+      margin: .5em 0
+      width: $full_w
+      .item-btn
+        margin: -2.5em 5em 0 1.7em
+      p
+        font-size: 2.5em
